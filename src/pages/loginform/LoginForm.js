@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./LoginForm.css";
-//import axios from "axios";
+import axios from "axios";
 import ModalDialog from "../../component/modal/ModalDialog";
 
 const Login = ({ setHasCertification }) => {
@@ -20,27 +20,27 @@ const Login = ({ setHasCertification }) => {
     if (id === "" || password === "") {
       handleOpen();
     } else {
-      // const data = { userid: id, password: password };
-      // await axios
-      //   .post("/api/user/login", data, {
-      //     headers: { "Access-Control-Allow-Origin": "*" },
-      //   })
-      //   .then((response) => {
-      //     console.log(response.data.result);
-      //     if (response.data.result === true) {
-      //       return (
-              console.log("로그인성공")
-              setHasCertification(true)
+      const data = { userid: id, password: password };
+      await axios
+        .post("/api/user/login", data, {
+          headers: { "Access-Control-Allow-Origin": "*" },
+        })
+        .then((response) => {
+          console.log(response.data.result);
+          if (response.data.result === true) {
+            return (
+              console.log("로그인성공"),
+              setHasCertification(true),
               localStorage.setItem("authenticated", true)
-    //         );
-    //       }
-    //     })
-    //     .catch(
-    //       (error) => console.log("로그인 실패"),
-    //       setId(""),
-    //       setPassword("")
-    //     );
-     }
+            );
+          }
+        })
+        .catch(
+          (error) => console.log("로그인 실패"),
+          setId(""),
+          setPassword("")
+        );
+    }
   };
 
   return (
