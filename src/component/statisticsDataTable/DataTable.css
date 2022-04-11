@@ -1,0 +1,36 @@
+/* .btn-box{
+    display: flex;
+    flex-direction: row;
+    gap: 0px 5px;
+    position: relative;
+    top: -50px;
+    right: -80px;
+    
+}
+.content-table{
+    position: relative;
+    top: -35px;
+} */
+
+.btn-box{
+    display: flex;
+    position: absolute;
+    top: 195px;
+    gap: 0px 5px;
+    right: 220px;
+}
+.re-btn, .excel-btn{
+    width: 35px;
+    height: 35px;
+    border: 1px solid #dedede;
+    color: #757575;
+    background: white;
+    cursor: pointer;
+    /* display: table-cell;
+    vertical-align:middle; */
+    border-radius: 3px;
+}
+.icon{
+    width: 90%;
+    height: 90%;
+}
