@@ -14,7 +14,6 @@ const Login = ({ setHasCertification }) => {
   const handleClose = () => setOpen(false);
 
   //form -> submit
-  //변경!!!!
   const handleSubmit = async (event) => {
     event.preventDefault();
 
