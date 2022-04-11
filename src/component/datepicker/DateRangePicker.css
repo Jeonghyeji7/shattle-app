@@ -1,0 +1,15 @@
+.big-range-box{
+    display: flex;
+    flex-direction: row;
+    gap: 10px 20px;
+}
+
+.small-range-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.label{
+    margin-right: 10px;
+}
